@@ -1,3 +1,4 @@
 dataBrazil/
 .DS_Store
 *.csv
+.ipynb*

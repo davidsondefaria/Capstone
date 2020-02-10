@@ -70,10 +70,10 @@ def etl_process( spark
                 )
     return dataset
 
-def process_cities_data(spark, brazil_cities_path, output_data, format='csv', **options):
-    if format == 'csv':
+def process_cities_data(spark, brazil_cities_path, output_data, input_format='csv', **options):
+    if input_format == 'csv':
         brazil_df = pd.read_csv(brazil_cities_path, **options)
-    elif format == 'json':
+    elif input_format == 'json':
         brazil_df = pd.read_json(brazil_cities_path, **options)
     
     brazil_df.fillna(0, inplace=True)
@@ -85,18 +85,20 @@ def process_cities_data(spark, brazil_cities_path, output_data, format='csv', **
                                  , 'LAT', 'ALT'
                                  ])
     
-    brazil_df = brazil_df.rename(columns={'CITY': 'city', 'STATE': 'state'
+    brazil_df = brazil_df.rename(columns={'CITY': 'city'
+                                          , 'STATE': 'state'
                                           , 'CAPITAL': 'capital'
                                           , 'IDHM Ranking 2010': 'hdi_ranking'
-                                          , 'IDHM': 'hdi', 'IDHM_Renda': 'hdi_gni'
+                                          , 'IDHM': 'hdi'
+                                          , 'IDHM_Renda': 'hdi_gni'
                                           , 'IDHM_Longevidade': 'hdi_life'
                                           , 'IDHM_Educacao': 'hdi_education'
                                           , 'LONG': 'longitude'
                                           , 'LAT': 'latitude'
                                           , 'ALT': 'altitude'
                                          })
-    print(brazil_df.shape)
-    print(brazil_df.head())
+#     print(brazil_df.shape)
+#     print(brazil_df.head())
     
     brazil = read_dataframe(spark, brazil_df, **options)
     brazil.printSchema()
@@ -109,10 +111,10 @@ def process_cities_data(spark, brazil_cities_path, output_data, format='csv', **
 
     
 
-def process_enem_data(spark, enem_path, output_data, format='csv', **options):
-    if format == 'csv':
+def process_enem_data(spark, enem_path, output_data, input_format='csv', **options):
+    if input_format == 'csv':
         enem2018_df = pd.read_csv(enem_path, **options)
-    elif format == 'json':
+    elif input_format == 'json':
         enem2018_df = pd.read_json(enem_path, **options)
         
     enem2018_df.fillna(0, inplace=True)
@@ -159,8 +161,8 @@ def process_enem_data(spark, enem_path, output_data, format='csv', **options):
                                           , 'TP_STATUS_REDACAO': 'essay_status'
                                           , 'NU_NOTA_REDACAO': 'grade_essay'
                                          })
-    print(enem2018_df.shape)
-    print(enem2018_df.head())
+#     print(enem2018_df.shape)
+#     print(enem2018_df.head())
 
     enem = read_dataframe(spark, enem2018_df, **options)
     enem.printSchema()

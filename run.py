@@ -31,7 +31,7 @@ def main():
     spark = create_spark_session()
     process_cities_data(spark, brazil_cities_path, output_data=outputS3)
     process_enem_data(spark, enem_2018_path, output_data=outputS3)
-    
+    ##run dags (como?)
     
 if __name__ == "__main__":
     main()

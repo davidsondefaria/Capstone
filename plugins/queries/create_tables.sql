@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS student_dim(
     registration numeric(18,0) NOT NULL,
     age int,
     gender char,
-    collor varchar(16),
+    collor_race varchar(16),
     marital_status varchar(16),
     nationality varchar(16),
     school_type varchar(16),

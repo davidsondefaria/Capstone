@@ -41,28 +41,28 @@ After the data is processed, they will have the following columns:
 
 ##### Enem 2018 Columns Subtitles
 
-|         Columns           | Legend                       |||         Columns        | Legend                         |
-|---------------------------|------------------------------|||------------------------|--------------------------------|
-|registration               |Number of Registration        |||def_dyslexia            |Is dyslexic?                    |
-|city_residence_code        |Code of Residence City        |||def_dyscalculia         |Has dyscalculia?                |
-|city_residence             |Residence City                |||def_autism              |Is autistic?                    |
-|state_residence_code       |Code of Residence State       |||def_monocular_vision    |Has Monocular Vision?           |
-|state_residence            |Residence State               |||def_other               |Has any Other Disability?       |
-|age                        |Age                           |||social_name             |Social Name                     |
-|gender                     |Gender                        |||city_test_code          |Code of Application City        |
-|matiral_status             |Marital Status                |||city_test               |Application City                |
-|color_race                 |Color or Race                 |||state_test_code         |Code of Application State       |
-|nationality                |Nationality                   |||state_test              |Application State               |
-|high_school_status         |Has finished High School?     |||presence_natural_science|Presence in Natural Science Test|
-|high_school_year_conclusion|Year of High School Conclusion|||presence_human_science  |Presence in Human Science Test  |
-|school_type                |Type of High School           |||presence_languages      |Presence in Languages Test      |
-|def_low_vision             |Has Low Vision Deficiency?    |||presence_math           |Presence in Math Test           |
-|def_blind                  |Is Blind?                     |||grade_natural_science   |Grade in Natural Science Test   |
-|def_deaf                   |Is Deaf?                      |||grade_human_science     |Grade in Human Science Test     |
-|def_low_hearing            |Has Low Hearing Deficiency?   |||grade_languages         |Grade in Languages Test         |
-|def_blind_deaf             |Is Blind and Deaf?            |||grade_math              |Grade in Math Test              |
-|def_physical               |Has Physical Deficiency?      |||essay_status            |Essay Status                    |
-|def_mental                 |Has Mental Deficiency?        |||grade_essay             |Grade in Essay                  |
+|         Columns           | Legend                       |         Columns        | Legend                         |
+|---------------------------|------------------------------|------------------------|--------------------------------|
+|registration               |Number of Registration        |def_dyslexia            |Is dyslexic?                    |
+|city_residence_code        |Code of Residence City        |def_dyscalculia         |Has dyscalculia?                |
+|city_residence             |Residence City                |def_autism              |Is autistic?                    |
+|state_residence_code       |Code of Residence State       |def_monocular_vision    |Has Monocular Vision?           |
+|state_residence            |Residence State               |def_other               |Has any Other Disability?       |
+|age                        |Age                           |social_name             |Social Name                     |
+|gender                     |Gender                        |city_test_code          |Code of Application City        |
+|matiral_status             |Marital Status                |city_test               |Application City                |
+|color_race                 |Color or Race                 |state_test_code         |Code of Application State       |
+|nationality                |Nationality                   |state_test              |Application State               |
+|high_school_status         |Has finished High School?     |presence_natural_science|Presence in Natural Science Test|
+|high_school_year_conclusion|Year of High School Conclusion|presence_human_science  |Presence in Human Science Test  |
+|school_type                |Type of High School           |presence_languages      |Presence in Languages Test      |
+|def_low_vision             |Has Low Vision Deficiency?    |presence_math           |Presence in Math Test           |
+|def_blind                  |Is Blind?                     |grade_natural_science   |Grade in Natural Science Test   |
+|def_deaf                   |Is Deaf?                      |grade_human_science     |Grade in Human Science Test     |
+|def_low_hearing            |Has Low Hearing Deficiency?   |grade_languages         |Grade in Languages Test         |
+|def_blind_deaf             |Is Blind and Deaf?            |grade_math              |Grade in Math Test              |
+|def_physical               |Has Physical Deficiency?      |essay_status            |Essay Status                    |
+|def_mental                 |Has Mental Deficiency?        |grade_essay             |Grade in Essay                  |
 |def_attention              |Has Attention Deficit?        |
 
 

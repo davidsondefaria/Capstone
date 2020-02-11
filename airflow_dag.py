@@ -141,9 +141,6 @@ start_operator >> enem_to_s3
 # DAG: Load data from S3 into Redshift stage tables
 
 brazil_to_s3 >> brazil_cities_to_redshift
-brazil_to_s3 >> enem_to_redshift
-
-enem_to_s3 >> brazil_cities_to_redshift
 enem_to_s3 >> enem_to_redshift
 
 # DAG: Load dimension tables with data in fact and stage tables
@@ -176,29 +173,3 @@ city_dim_table >> run_quality_checks
 
 # DAG: End operation
 run_quality_checks >> end_operator
-
-
-
-
-
-
-
-
-candidate_fact_create = ("""
-        DROP TABLE IF EXISTS candidate_fact;
-        CREATE TABLE IF NOT EXISTS candidate_fact(
-            registration numeric(18,0) NOT NULL,
-            id_city int NOT NULL,
-            id_city_test int NOT NULL,
-            id_test int NOT NULL,
-            high_school_year_conclusion int,
-            high_school_status int,
-            grade_natural_science numeric(4,1),
-            grade_human_science numeric(4,1),
-            grade_languages numeric(4,1),
-            grade_math numeric(4,1),
-            essay_status int,
-            grade_essay numeric(4,1),
-            CONSTRAINT id_candidate PRIMARY KEY (registration)
-        );
-    """)
